@@ -309,9 +309,23 @@ img {
     width: 90%;
   }
 }
+	.banner {
+            position: fixed;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            background-color: #00b06f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            transition: top 0.5s ease-in-out;
+        }
 </style>
 
 <body>
+
+	<div class="banner" id="banner">Welcome to our website!</div>
     <div class="navbar">
         <div class="profile">
             <div class="profileimg">
@@ -465,6 +479,69 @@ let showbox4 = () => {
   box4.style.display = "flex";
 };
     </script>
+
+	<script>
+  const messages = [
+      "ShadowBlazer Just Got 50000 Robux",
+"TurboPhantom Just Got 1700 Robux",
+"NeonVortex Just Got 10000 Robux",
+"GlitchRider Just Got 4500 Robux",
+"CyberStorm Just Got 10000 Robux",
+"FrostSpectre Just Got 50000 Robux",
+"PixelReaper Just Got 4500 Robux",
+"OmegaShadow Just Got 1700 Robux",
+"AquaByte Just Got 50000 Robux",
+"HyperWolf Just Got 10000 Robux",
+"VoidBlaster Just Got 1700 Robux",
+"SolarHavoc Just Got 4500 Robux",
+"DoomGlitch Just Got 50000 Robux",
+"LegendaryPixel Just Got 1700 Robux",
+"ElectricNeko Just Got 4500 Robux",
+"RogueKnight Just Got 10000 Robux",
+"CyberNebula Just Got 50000 Robux",
+"InfernoXeno Just Got 10000 Robux",
+"PhantomTitan Just Got 4500 Robux",
+"QuantumGamer Just Got 1700 Robux",
+"MechaDrake Just Got 4500 Robux",
+"BlueSpectre Just Got 10000 Robux",
+"FirestormZero Just Got 50000 Robux",
+"ArcadeWraith Just Got 1700 Robux",
+"SonicBlox Just Got 10000 Robux",
+"ToxicHunter Just Got 4500 Robux",
+"GhostlyWarrior Just Got 50000 Robux",
+"DarkStorm Just Got 1700 Robux",
+"SolarByte Just Got 10000 Robux",
+"NeonDrifter Just Got 4500 Robux",
+"FrostBlaze Just Got 1700 Robux",
+"PixelRunner Just Got 50000 Robux",
+"GlitchNexus Just Got 4500 Robux",
+"EpicPhantom Just Got 10000 Robux",
+"ShadowDagger Just Got 50000 Robux",
+"RogueBlox Just Got 1700 Robux",
+"EnderCyber Just Got 4500 Robux",
+"HyperReaper Just Got 10000 Robux",
+"VoidSpecter Just Got 50000 Robux",
+"HavocKnight Just Got 1700 Robux"
+  ];
+  let index = 0;
+
+  function showBanner() {
+      const banner = document.getElementById("banner");
+      const audio = new Audio("https://www.myinstants.com/media/sounds/tiny-button-push.mp3");
+
+      banner.textContent = messages[index];
+      banner.style.top = "0px";
+      audio.play();
+
+      setTimeout(() => {
+          banner.style.top = "-50px";
+          index = (index + 1) % messages.length;
+      }, 2000);
+  }
+
+  setInterval(showBanner, 7000);
+</script>
+	
 </body>
 
 </html>
